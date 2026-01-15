@@ -1,2 +1,17 @@
 # my_chat_tools
-A collection of tools for chatting that I built for personal training.
+A collection of tools that I built for personal training:
+- **get_models.py** => This is a standalone utility to retrieve all available API models per provider. Providers are OpenAI, Anthropic, Google, xAI, Groq and Ollama. I used it to update the `models.yml` file properly (which is used by the chatbots to choose for a working model.)
+- **my_chatbot.py** => This is a chatting interface, that I made for personal use and provides some features that I could not find in other tools:
+    - Be able to use models of any provider without the limitations of free tiers, but do not be tied to a specific subscription and allow flexibility.
+    - Add features like the summarization to improve personal efficiency.
+    - Use multiple models in the same conversation. For example, start with Sonnet, when you need something more advanced ask Opus, and for simple tasks like summarization go to Haiku (or even better to Ollama!).
+I plan to extend with more features in the future.
+
+### Other files:
+- **.sample_env** => This is a sample for the `.env` file, that is required for storing the API keys.
+- **config.py** => This code is used to set up the API keys, provider URLs and other important parameters.
+
+## Executing the code
+Once you have cloned the repository, you need to install the dependencies and run the script:
+1. **Installation** => Go to the folder where `install.sh` is, run `chmod +x install.sh` and then `./install.sh`.
+2. **Execution** => On the same folder run `chmod +x my_chatbot.sh`, then every time you need to run the app do `./my_chatbot.sh`.

@@ -1,0 +1,6 @@
+### Replace XXX with actual key value and rename file to .env ###
+OPENAI_API_KEY=XXX
+ANTHROPIC_API_KEY=XXX
+GOOGLE_API_KEY=XXX
+GROQ_API_KEY=XXX
+GROK_API_KEY=XXX
