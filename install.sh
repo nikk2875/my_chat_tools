@@ -51,4 +51,5 @@ pip install -r requirements.txt
 cp ./my_chatbot.py $SCRIPT_DIR/
 cp ./config.py $SCRIPT_DIR/
 cp ./models.yml $SCRIPT_DIR/
+cp ./.env $SCRIPT_DIR/
 echo "Installation complete."

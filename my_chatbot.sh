@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the directory where the script will be installed
-SCRIPT_DIR="/home/nikk/MyApps" # set your preferred folder or leave blank for current
+SCRIPT_DIR="" # set your preferred folder or leave blank for current
 if [ -z "$SCRIPT_DIR" ]; then # set to current if blank
     echo "DEST_DIR is empty. Setting to current folder."
     SCRIPT_DIR="`pwd`"

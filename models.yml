@@ -44,7 +44,6 @@ providers:
     name: Ollama
     models:
       - gpt-oss:20b
-      - phi4-reasoning:14b
       - granite3.3:8b
       - qwen2.5-coder:7b
       - qwen2.5-coder:14b
