@@ -1,19 +1,38 @@
 #!/bin/bash
 
+# Define the directory where the script will be installed
+SCRIPT_DIR="/home/nikk/MyApps" # set your preferred folder or leave blank for current
+if [ -z "$SCRIPT_DIR" ]; then # set to current if blank
+    echo "DEST_DIR is empty. Setting to current folder."
+    SCRIPT_DIR="`pwd`"
+fi
+SCRIPT_DIR="$SCRIPT_DIR/My_Chatbot" # final target includes app
+
 # Check if Python3 is installed
 if ! command -v python3 &> /dev/null; then
     echo "Python3 could not be found. Please install Python3 first."
     exit 1
 fi
 
-# Check if virtualenv is installed
-if ! python3 -m pip show virtualenv &> /dev/null; then
-    echo "virtualenv is not installed. Installing virtualenv..."
-    python3 -m pip install virtualenv
+# Check if pip is installed
+if ! command -v pip &> /dev/null; then
+    echo "pip is not installed. Please install pip first."
+    exit 1
 fi
 
-# Get the directory where the script is located
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+# Check if virtualenv is installed
+if ! python3 -m pip show virtualenv &> /dev/null; then
+    echo "virtualenv is not installed. Please install virtualenv first."
+    exit 1
+fi
+
+# Create target folder
+if [[ ! -d "$SCRIPT_DIR" ]]; then
+    echo "Directory $SCRIPT_DIR does not exist. Creating directory..."
+    mkdir -p $SCRIPT_DIR
+else
+    echo "Directory $SCRIPT_DIR exists."
+fi
 
 # Create virtual environment
 if [ ! -d "$SCRIPT_DIR/venv" ]; then
@@ -26,7 +45,10 @@ fi
 # Activate the virtual environment and install dependencies
 echo "Installing dependencies from requirements.txt"
 source "$SCRIPT_DIR/venv/bin/activate"
-pip install -r "$SCRIPT_DIR/requirements.txt"
+pip install -r requirements.txt
 
-echo "Installation complete. To activate the virtual environment, run:"
-echo "source $SCRIPT_DIR/venv/bin/activate"
+# Move Python code to target folder
+cp ./my_chatbot.py $SCRIPT_DIR/
+cp ./config.py $SCRIPT_DIR/
+cp ./models.yml $SCRIPT_DIR/
+echo "Installation complete."

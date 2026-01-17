@@ -2,5 +2,5 @@ openai
 anthropic
 ollama
 python-dotenv
-yaml
+pyyaml
 gradio
