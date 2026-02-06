@@ -3,13 +3,14 @@ providers:
     name: OpenAI
     models:
       - gpt-5.2
-      - gpt-5.2-pro
       - gpt-5-mini
       - gpt-5-nano
-      - gpt-5
       - gpt-4.1-mini
       - gpt-4.1-nano
       - gpt-4.1
+      - gpt-5.1-codex
+      - gpt-5.1-codex-mini
+      - gpt-5.1-codex-max
 
   anthropic:
     name: Anthropic
@@ -24,12 +25,15 @@ providers:
       - gemini-2.5-flash
       - gemini-2.5-pro
       - gemini-2.5-flash-lite
+      - gemini-3-pro-preview
+      - gemini-3-flash-preview
 
   grok:
     name: xAI Grok
     models:
       - grok-4-1-fast-reasoning
       - grok-4-1-fast-non-reasoning
+      - grok-code-fast-1
 
   groq:
     name: Groq
@@ -37,6 +41,7 @@ providers:
       - openai/gpt-oss-20b
       - openai/gpt-oss-120b
       - qwen/qwen3-32b
+      - groq/compound
       - llama-3.3-70b-versatile
       - moonshotai/kimi-k2-instruct
 

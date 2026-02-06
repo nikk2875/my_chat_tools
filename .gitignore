@@ -1,4 +1,5 @@
 .env
+.vscode
 my_chat_tools/
 __pycache__/
 *.pyc
