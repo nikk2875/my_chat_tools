@@ -177,7 +177,7 @@ def main():
         # Handle exit button
         exitapp.click(exit_app, None, None)
 
-    bot.launch()
+    bot.launch(server_name="0.0.0.0", server_port=7860)
 
 if __name__ == "__main__":
     main()
