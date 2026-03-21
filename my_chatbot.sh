@@ -6,7 +6,7 @@ if [ -z "$SCRIPT_DIR" ]; then # set to current if blank
     echo "DEST_DIR is empty. Setting to current folder."
     SCRIPT_DIR="`pwd`"
 fi
-SCRIPT_DIR="$SCRIPT_DIR/My_Chatbot" # final target includes app
+SCRIPT_DIR="$SCRIPT_DIR/My_Chatbot" # final target folder of the app
 
 # Check if virtual environment exists
 VENV_PATH="$SCRIPT_DIR/venv"

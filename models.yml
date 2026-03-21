@@ -2,38 +2,42 @@ providers:
   openai:
     name: OpenAI
     models:
-      - gpt-5.2
-      - gpt-5-mini
-      - gpt-5-nano
+      - gpt-5.4
+      - gpt-5.4-mini
+      - gpt-5.4-nano
+      - gpt-4.1
       - gpt-4.1-mini
       - gpt-4.1-nano
-      - gpt-4.1
-      - gpt-5.1-codex
-      - gpt-5.1-codex-mini
-      - gpt-5.1-codex-max
+      - o3
+      - o4-mini
 
   anthropic:
     name: Anthropic
     models:
-      - claude-opus-4-5-20251101
+      - claude-sonnet-4-6
+      - claude-opus-4-6
       - claude-haiku-4-5-20251001
-      - claude-sonnet-4-5-20250929
 
   gemini:
     name: Google Gemini
     models:
+      - gemini-3.1-pro-preview
+      - gemini-3.1-flash-lite-preview
+      - gemini-3-pro-preview
+      - gemini-3-flash-preview
       - gemini-2.5-flash
       - gemini-2.5-pro
       - gemini-2.5-flash-lite
-      - gemini-3-pro-preview
-      - gemini-3-flash-preview
 
   grok:
     name: xAI Grok
     models:
-      - grok-4-1-fast-reasoning
+      - grok-4.20-0309-non-reasoning
+      - grok-4.20-0309-reasoning
       - grok-4-1-fast-non-reasoning
-      - grok-code-fast-1
+      - grok-4-1-fast-reasoning
+      - grok-4-fast-non-reasoning
+      - grok-4-fast-reasoning
 
   groq:
     name: Groq
@@ -41,15 +45,34 @@ providers:
       - openai/gpt-oss-20b
       - openai/gpt-oss-120b
       - qwen/qwen3-32b
-      - groq/compound
       - llama-3.3-70b-versatile
       - moonshotai/kimi-k2-instruct
 
   ollama:
     name: Ollama
     models:
+      - deepseek-r1:14b
+      - deepseek-r1:8b
+      - cogito:14b
+      - cogito:8b
+      - cogito:3b
+      - llama3.1:8b
+      - llama3.2:3b
+      - granite4:3b
+      - nemotron-3-nano:4b
+      - phi4:14b
+      - phi4-mini:3.8b
+      - qwen3:14b
+      - qwen3:8b
+      - qwen3:4b
+      - qwen3:1.7b
+      - gemma3:12b
+      - gemma3:4b
+      - ministral-3:14b
+      - ministral-3:8b
+      - ministral-3:3b
+      - lfm2:24b
       - gpt-oss:20b
-      - granite3.3:8b
-      - qwen2.5-coder:7b
-      - qwen2.5-coder:14b
+      - mistral-small3.2:24b
       - devstral-small-2:24b
+      - qwen3-coder:30b

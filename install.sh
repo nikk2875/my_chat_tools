@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Define the directory where the script will be installed
-SCRIPT_DIR="/home/nikk/MyApps" # set your preferred folder or leave blank for current
-if [ -z "$SCRIPT_DIR" ]; then # set to current if blank
+BASE_SCRIPT_DIR="/home/nikk/MyApps" # set your preferred folder or leave blank for current
+if [ -z "$BASE_SCRIPT_DIR" ]; then # set to current if blank
     echo "DEST_DIR is empty. Setting to current folder."
-    SCRIPT_DIR="`pwd`"
+    BASE_SCRIPT_DIR="`pwd`"
 fi
-SCRIPT_DIR="$SCRIPT_DIR/My_Chatbot" # final target includes app
+SCRIPT_DIR="$BASE_SCRIPT_DIR/My_Chatbot" # final target includes app
 
 # Check if Python3 is installed
 if ! command -v python3 &> /dev/null; then
@@ -52,4 +52,5 @@ cp ./my_chatbot.py $SCRIPT_DIR/
 cp ./config.py $SCRIPT_DIR/
 cp ./models.yml $SCRIPT_DIR/
 cp ./.env $SCRIPT_DIR/
+cp ./my_chatbot.sh $BASE_SCRIPT_DIR/
 echo "Installation complete."
