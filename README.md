@@ -13,5 +13,5 @@ I plan to extend with more features in the future.
 
 ## Executing the code - FOR LINUX
 Once you have cloned the repository, you need to install the dependencies and run the script:
-1. **Installation** => Go to the folder where `install.sh` is, edit the file and define a target folder (or do nothing to use the current one), run `chmod +x install.sh` and then `./install.sh`.
-2. **Execution** => On the destination folder run `chmod +x my_chatbot.sh`, then edit file and set the target folder of the installation and run the app with `./my_chatbot.sh`. To initiate the App open the URL (http://127.0.0.1:7860/) in any browser.
+1. **Installation** => Go to the folder where you cloned the repo and find `install.sh`. Edit the file and define a target folder, run `chmod +x install.sh` and then `./install.sh`. *It is assumed that you have `uv` installed in your system!*
+2. **Execution** => You will find the Python code on the target folder that you defined in the previous step. But, I wanted to have the caller on its parent folder, so you need to find `my_chatbot.sh` there. Find it and make it executable with `chmod +x my_chatbot.sh`, then run the app with `./my_chatbot.sh`. To initiate the App open the URL (http://127.0.0.1:7860/) in any browser.
