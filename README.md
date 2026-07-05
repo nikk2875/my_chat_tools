@@ -1,4 +1,4 @@
-# my_chat_tools
+# My_ChatBot
 A collection of tools that I built for personal training:
 - **get_models.py** => This is a standalone utility to retrieve all available API models per provider. Providers are OpenAI, Anthropic, Google, xAI, Groq and Ollama. I used it to update the `models.yml` file properly (which is used by the chatbots to choose for a working model).
 - **my_chatbot.py** => This is a chatting interface, that I made for personal use and provides some features that I could not find in other tools:
