@@ -44,6 +44,8 @@ get_models('Google Gemini', config.gemini_api_key, config.GEMINI_BASE_URL)
 get_models('Grok', config.grok_api_key, config.GROK_BASE_URL)
 # Groq
 get_models('Groq', config.groq_api_key, config.GROQ_BASE_URL)
+# OpenRouter
+get_models('OpenRouter', config.openrouter_api_key, config.OPENROUTER_BASE_URL)
 # Anthropic
 get_anthropic_models()
 # Ollamacle

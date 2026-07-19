@@ -9,6 +9,7 @@ GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 GROK_BASE_URL = "https://api.x.ai/v1"
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"
 OLLAMA_BASE_URL = "http://localhost:11434/v1"
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
 # Set API keys
 openai_api_key = os.getenv('OPENAI_API_KEY')
@@ -16,7 +17,7 @@ anthropic_api_key = os.getenv('ANTHROPIC_API_KEY')
 gemini_api_key = os.getenv('GOOGLE_API_KEY')
 grok_api_key = os.getenv('GROK_API_KEY')
 groq_api_key = os.getenv('GROQ_API_KEY')
-
+openrouter_api_key = os.getenv('OPENROUTER_API_KEY')
 
 # Define models file name - must be in the same folder as the mail Python script
 config_file = 'models.yml'
